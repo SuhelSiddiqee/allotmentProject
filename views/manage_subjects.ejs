@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Subjects - Allotment Project</title>
+    <link rel="stylesheet" href="/public/style.css">
+
+</head>
+<body>
+    <h1>Manage Subjects</h1>
+    <table border="1">
+        <tr>
+            <th>Subject Name</th>
+            <th>Semester</th>
+            <th>Syllabus Type</th>
+        </tr>
+        <% subjects.forEach(subject => { %>
+            <tr>
+                <td><%= subject.subject_name %></td>
+                <td><%= subject.subject_semester %></td>
+                <td><%= subject.syllabus_type %></td>
+            </tr>
+        <% }) %>
+    </table>
+    <a href="/dashboard">Back to Dashboard</a>
+</body>
+</html>

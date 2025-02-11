@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Teachers - Allotment Project</title>
+    <link rel="stylesheet" href="/public/style.css">
+
+</head>
+<body>
+    <h1>Manage Teachers</h1>
+    <table border="1">
+        <tr>
+            <th>Name</th>
+            <th>Gender</th>
+            <th>Phone</th>
+            <th>Actions</th>
+        </tr>
+        <% teachers.forEach(teacher => { %>
+            <tr>
+                <td><%= teacher.teacher_name %></td>
+                <td><%= teacher.teacher_gender %></td>
+                <td><%= teacher.teacher_phone %></td>
+                <td>
+                    <a href="/dashboard/edit-teacher/<%= teacher.teacher_id %>">Edit</a>
+                    <a href="/dashboard/delete-teacher/<%= teacher.teacher_id %>">Delete</a>
+                </td>
+            </tr>
+        <% }) %>
+    </table>
+    <a href="/dashboard">Back to Dashboard</a>
+</body>
+</html>

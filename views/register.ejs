@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - Allotment Project</title>
+    <link rel="stylesheet" href="/public/style.css">
+
+</head>
+<body>
+    <h2>Register Your College</h2>
+    <form action="/register" method="POST">
+        <label>College Name:</label>
+        <input type="text" name="college_name" required>
+        
+        <label>College Address:</label>
+        <input type="text" name="college_address" required>
+        
+        <label>College Pincode:</label>
+        <input type="text" name="college_pincode" required>
+        
+        <label>College HOD:</label>
+        <input type="text" name="college_hod" required>
+        
+        <button type="submit">Register</button>
+    </form>
+    <p>Already have an account? <a href="/login">Login here</a></p>
+</body>
+</html>

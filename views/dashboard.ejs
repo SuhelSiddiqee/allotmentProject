@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Allotment Project</title>
+    <link rel="stylesheet" href="/public/style.css">
+
+</head>
+<body>
+    <h1>Welcome, <%= college.college_name %></h1>
+    <p><strong>College Address:</strong> <%= college.college_address %></p>
+    <p><strong>College Pincode:</strong> <%= college.college_pincode %></p>
+    <p><strong>College HOD:</strong> <%= college.college_hod %></p>
+
+    <h3>Manage Data:</h3>
+    <ul>
+        <li><a href="/dashboard/add-teacher">Add Teacher</a></li>
+        <li><a href="#">Manage Subjects</a></li>
+        <li><a href="#">Assign Teachers to Subjects</a></li>
+        <li><a href="#">Manage Batches</a></li>
+    </ul>
+
+    <a href="/logout">Logout</a>
+</body>
+</html>
