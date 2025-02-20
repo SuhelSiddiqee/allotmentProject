@@ -3,14 +3,148 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome to Allotment Project</title>
-    <link rel="stylesheet" href="/style.css">
+    <title>Login & Sign Up - Allotment Project</title>
+    <style>
+        /* General styling */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f5f7fa;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            width: 100%;
+            max-width: 900px;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: row;
+            gap: 20px;
+        }
+
+        .form-section {
+            flex: 1;
+            padding: 20px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #4CAF50; /* Green color like MongoDB */
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+        }
+
+        label {
+            font-size: 1rem;
+            margin-bottom: 8px;
+            color: #333;
+            display: block;
+        }
+
+        input[type="text"],
+        input[type="password"],
+        input[type="number"],
+        input[type="email"] {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-size: 1rem;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            background-color: #4CAF50;
+            border: none;
+            color: #fff;
+            font-size: 1rem;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        .toggle-link {
+            text-align: center;
+            color: #666;
+            margin-top: 15px;
+        }
+
+        a {
+            color: #4CAF50;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive styling */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                max-width: 400px;
+                padding: 20px;
+            }
+
+            .form-section {
+                padding: 0;
+            }
+
+            h2 {
+                font-size: 1.3rem;
+            }
+
+            input[type="text"],
+            input[type="password"],
+            input[type="number"],
+            input[type="email"],
+            button {
+                font-size: 1rem;
+            }
+        }
+    </style>
 </head>
 <body>
     <div class="container">
-        <h1>Welcome to Allotment Project 1</h1>
-        <a href="/register" class="btn">Register</a>
-        <a href="/login" class="btn">Login</a>
+        <div class="form-section">
+            <h2>Login to Your College</h2>
+            <form action="/login" method="POST">
+                <label for="college_id">College ID:</label>
+                <input type="number" id="college_id" name="college_id" required>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+                <button type="submit">Login</button>
+            </form>
+            <p class="toggle-link">Don't have an account? <a href="#signup">Sign up here</a></p>
+        </div>
+        <div class="form-section">
+            <h2>Sign Up for Your College</h2>
+            <form action="/register" method="POST">
+                <label for="new_college_id">College ID:</label>
+                <input type="number" id="new_college_id" name="college_id" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="new_password">Password:</label>
+                <input type="password" id="new_password" name="password" required>
+                <button type="submit">Sign Up</button>
+            </form>
+            <p class="toggle-link">Already have an account? <a href="#login">Login here</a></p>
+        </div>
     </div>
 </body>
 </html>
